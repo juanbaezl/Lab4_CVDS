@@ -99,6 +99,7 @@ principio de inversión de dependencias:
 9. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
+   ![](img/imgTest.png)
 
 10. Al finalizar haga un nuevo commit:
 

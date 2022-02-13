@@ -13,6 +13,5 @@ public class PowerScore implements GameScore{
         incorrectPoints =  8*incorrectLetter;
         score = correctPoints - incorrectPoints;
         return (score > 500)?500:(score<0)?0:score;
-    }
-    
+    }    
 }
