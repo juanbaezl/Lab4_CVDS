@@ -66,7 +66,26 @@ principio de inversión de dependencias:
    implementarán las pruebas (GameScoreTest), en los
    comentarios iniciales, especifique las clases de equivalencia para
    las tres variantes de GameScore, e identifique
-   condiciones de frontera. 
+   condiciones de frontera.   
+   Clases de Equivalencia de Variantes de GameScore:  
+   Casos generales:
+   - Caso 1:(correctcount < 0, incorrectcount > 0)
+   - Caso 2: (correctcount > 0, incorrectcount < 0)
+   - Caso 3: (correctcount < 0, incorrectcount < 0)  
+
+   OriginalScore: 
+   - Caso 1: (0 < incorrectcount < 10 ,correctcount >= 0)
+   - Caso 2:(incorrectcount > 10 ,correctcount >= 0)
+   - Caso 3: (incorrectcount > correctcount *2, correctcount > 0) 
+
+   BonusScore: 
+   - Caso 1: (correctcount > 0, 0 < incorrectcount <= correctcount * 2)
+   - Caso 2: (incorrectcount > correctcount *2, correctcount > 0)
+   
+   PowerScore: 
+   - Caso 1: (incorrectcount*8 > 5^correctcount)
+   - Caso 2: (incorrectcount*8 < 5^correctcount)
+   - Caso 3:(incorrectcount > 0, correctcount > 0)
 
 7. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
