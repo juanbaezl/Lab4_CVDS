@@ -131,6 +131,7 @@ En este taller se va a utilizar un contenedor liviano ([GoogleGuice](https://git
 Incorpore el Contenedor Liviano Guice dentro del proyecto:
 
 * Revise las dependencias necesarias en el pom.xml.
+![](./img/imgDependencias.png)
 * Modifique la inyección de dependencias utilizando guice en lugar del
   método fábrica..
 * Configure la aplicación de manera que desde el programa SwingProject

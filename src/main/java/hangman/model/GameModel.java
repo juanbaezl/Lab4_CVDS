@@ -27,14 +27,14 @@ public class GameModel {
     
     
     private HangmanDictionary dictionary;
-    
+    private GameScore puntuation;
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
     
     
    
-    public GameModel(HangmanDictionary dictionary){
+    public GameModel(HangmanDictionary dictionary,GameScore puntuation){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
         randomWord = selectRandomWord();
@@ -42,7 +42,7 @@ public class GameModel {
         incorrectCount = 0;
         correctCount = 0;
         gameScore = 100;
-        
+        this.puntuation = puntuation;
     }
     
     //method: reset
@@ -98,7 +98,12 @@ public class GameModel {
     //getScore
     //purpose: returns current score value
     public int getScore() {
-        return gameScore;
+        int score = 0;
+        try{
+            score = puntuation.calculateScore(correctCount, incorrectCount);
+            System.out.println(score);
+        } catch(HangManException e){}
+        return score;
     }
 
     //name: selectRandomWord()
